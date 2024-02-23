@@ -274,6 +274,10 @@ div.caption {
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+    text-decoration: none;
+    padding: 10px 30px;
+    background: blue;
+    color: #fff;
 }
 
 .is-smallcaps {
