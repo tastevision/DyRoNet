@@ -119,11 +119,11 @@ class Trainer:
         if self.epoch % 2 == 1:
             logger.info("训练主结构，分支判断由speed_router给出，同时冻结speed_router")
             self.model.module.freeze_speed_detector()
-            self.model.module.unfreeze_backbone()
+            self.model.module.unfreeze_main_model()
             if self.args.lora:
                 # 把两个分支中的lora部分视为可训练的
                 logger.info("开启lora参数的训练")
-                lora.mark_only_lora_as_trainable(self.model.module.backbone, bias='lora_only')
+                lora.mark_only_lora_as_trainable(self.model.module, bias='lora_only')
             for n, p in self.model.module.named_parameters():
                 logger.info(f"{n}: {p.requires_grad}")
             for self.iter in range(self.max_iter):
