@@ -116,7 +116,7 @@ class Trainer:
         #         self.after_iter()
         #     self.model.module.unfreeze_speed_detector()
 
-        if self.epoch < 10 and self.epoch > 1:
+        if self.epoch % 2 == 1:
             logger.info("训练主结构，分支判断由speed_router给出，同时冻结speed_router")
             self.model.module.freeze_speed_detector()
             self.model.module.unfreeze_backbone()
