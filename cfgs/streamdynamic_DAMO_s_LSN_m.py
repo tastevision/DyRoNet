@@ -8,10 +8,6 @@ from yolox.exp import Exp as MyExp
 from loguru import logger
 import math
 
-"""
-分支1：DMAO-StreamNet s
-分支2：LongShortNet m
-"""
 
 class Exp(MyExp):
     def __init__(self):
