@@ -1,0 +1,17 @@
+mv ./cfgs/aaa_streamdynamic_DAMO_l.py         ./cfgs/streamdynamic_DAMO_l.py
+mv ./cfgs/aaa_streamdynamic_DAMO_l_LSN_s.py   ./cfgs/streamdynamic_DAMO_l_LSN_s.py
+mv ./cfgs/aaa_streamdynamic_DAMO_m.py         ./cfgs/streamdynamic_DAMO_m.py
+mv ./cfgs/aaa_streamdynamic_DAMO_m_LSN_s.py   ./cfgs/streamdynamic_DAMO_m_LSN_s.py
+mv ./cfgs/aaa_streamdynamic_DAMO_s.py         ./cfgs/streamdynamic_DAMO_s.py
+mv ./cfgs/aaa_streamdynamic_DAMO_s_LSN_l.py   ./cfgs/streamdynamic_DAMO_s_LSN_l.py
+mv ./cfgs/aaa_streamdynamic_DAMO_s_LSN_m.py   ./cfgs/streamdynamic_DAMO_s_LSN_m.py
+mv ./cfgs/aaa_streamdynamic_DAMO_s_LSN_s.py   ./cfgs/streamdynamic_DAMO_s_LSN_s.py
+mv ./cfgs/aaa_streamdynamic_DAMO_s_m_l.py     ./cfgs/streamdynamic_DAMO_s_m_l.py
+mv ./cfgs/aaa_streamdynamic_LSN_l.py          ./cfgs/streamdynamic_LSN_l.py
+mv ./cfgs/aaa_streamdynamic_LSN_m.py          ./cfgs/streamdynamic_LSN_m.py
+mv ./cfgs/aaa_streamdynamic_LSN_s.py          ./cfgs/streamdynamic_LSN_s.py
+mv ./cfgs/aaa_streamdynamic_LSN_s_m_l.py      ./cfgs/streamdynamic_LSN_s_m_l.py
+mv ./cfgs/aaa_streamdynamic_SYOLO_l.py        ./cfgs/streamdynamic_SYOLO_l.py
+mv ./cfgs/aaa_streamdynamic_SYOLO_m.py        ./cfgs/streamdynamic_SYOLO_m.py
+mv ./cfgs/aaa_streamdynamic_SYOLO_s.py        ./cfgs/streamdynamic_SYOLO_s.py
+mv ./cfgs/aaa_streamdynamic_SYOLO_s_m_l.py    ./cfgs/streamdynamic_SYOLO_s_m_l.py
