@@ -2,7 +2,7 @@
 today=`date +%Y%m%d`
 source ./evaluate_lora.sh
 
-cur_cfg=../cfgs/streamdynamic_DAMO_s_LSN_m
+cur_cfg=./cfgs/streamdynamic_DAMO_s_LSN_m
 ckpt1=./models/checkpoints/streamnet_s.pth
 ckpt2=./models/checkpoints/longshortnet_m.pth
 cur_exp_name=${today}_DAMO_s_LSN_m_lora
