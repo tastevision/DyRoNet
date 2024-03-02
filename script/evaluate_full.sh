@@ -10,16 +10,12 @@ ps -ef | grep $USER | grep stream | grep python | cut -d ' ' -f 4 | xargs -n 1 k
 function eval_process() {
 EXP_DIR=$1
 CFGS=$2
-CKPT1=$3
-CKPT2=$4
-TRAINED_CKPT=$5
+TRAINED_CKPT=$3
 
 python ./tools/eval.py -f $CFGS \
     --c $TRAINED_CKPT \
     --experiment-name $EXP_DIR \
     --router-mode max \
-    --logfile after_router_train_random_online_${today}.txt \
-    -d 1 -b 1 --conf 0.01 --fp16 &
-
-echo "done"
+    --logfile router_eval_${today}.txt \
+    -d 1 -b 1 --conf 0.01 --fp16
 }

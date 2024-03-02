@@ -668,7 +668,7 @@ class Trainer:
         if self.args.lora:
             # 在convert_model_to_lora函数中已经跳过了self.ignore_keys，不需重复
             logger.info(f"LoRA已经开启，正在保存LoRA权重")
-            save_state_dict = lora.lora_state_dict(save_model) # 只保存lora生效的那些层
+            save_state_dict = lora.lora_state_dict(save_model, bias='all') # 只保存lora生效的那些层
             # lora启用时，单独保存speed router的权重
             logger.info(f"LoRA已经开启，同时也保存speed router的权重")
             for k, v in save_model.state_dict().items():

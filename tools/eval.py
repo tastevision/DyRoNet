@@ -352,6 +352,8 @@ def main(exp, args, num_gpu):
             assert args.ckpt1 and args.ckpt2, "当前的实验参数没有提供args.ckpt，同时也没有提供args.ckpt1和args.ckpt2"
             model = resume_branch(model, 0, args.ckpt1)
             model = resume_branch(model, 1, args.ckpt2)
+            if args.ckpt3:
+                model = resume_branch(model, 2, args.ckpt3)
 
         if args.lora and args.lora_ckpt:
             logger.info(f"load lora checkpoint from {args.lora_ckpt}")
@@ -364,9 +366,7 @@ def main(exp, args, num_gpu):
             for n, _ in model.named_parameters():
                 weight_set.add(n)
             for k, _ in lora_ckpt["model"].items():
-                if k in weight_set:
-                    logger.info(f"正在载入 {k}")
-                else:
+                if k not in weight_set:
                     logger.info(f"{k} 不存在于model定义中")
             model.load_state_dict(lora_ckpt["model"], strict=False)
             logger.info("lora checkpoint was loaded.")
