@@ -13,7 +13,7 @@ CFGS=$2
 TRAINED_CKPT=$3
 
 python ./tools/eval.py -f $CFGS \
-    --c $TRAINED_CKPT \
+    -c $TRAINED_CKPT \
     --experiment-name $EXP_DIR \
     --router-mode max \
     --logfile router_eval_${today}.txt \

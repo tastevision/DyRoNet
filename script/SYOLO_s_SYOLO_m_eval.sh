@@ -1,6 +1,6 @@
 #!/bin/bash
 today=`date +%Y%m%d`
-source ./evaluate_full.sh
+source ./script/evaluate_full.sh
 
 cur_cfg=./cfgs/streamdynamic_SYOLO_s
 ckpt=./models/checkpoints/SYOLO_s_SYOLO_m.pth
