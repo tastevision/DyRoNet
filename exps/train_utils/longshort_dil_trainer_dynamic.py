@@ -123,7 +123,7 @@ class Trainer:
             if self.args.lora:
                 # 把两个分支中的lora部分视为可训练的
                 logger.info("开启lora参数的训练")
-                lora.mark_only_lora_as_trainable(self.model.module, bias='lora_only')
+                lora.mark_only_lora_as_trainable(self.model.module, bias='all')
             for n, p in self.model.module.named_parameters():
                 logger.info(f"{n}: {p.requires_grad}")
             for self.iter in range(self.max_iter):
@@ -310,7 +310,7 @@ class Trainer:
             # if not self.args.resume: # 此时证明是首次的训练，需要初始化lora
             self.convert_model_to_lora(model)
             # 把两个分支中的lora部分视为可训练的
-            lora.mark_only_lora_as_trainable(model, bias='lora_only')
+            lora.mark_only_lora_as_trainable(model, bias='all')
 
         # data related init
         self.no_aug = self.start_epoch >= self.max_epoch - self.exp.no_aug_epochs
@@ -669,6 +669,8 @@ class Trainer:
             # 在convert_model_to_lora函数中已经跳过了self.ignore_keys，不需重复
             logger.info(f"LoRA已经开启，正在保存LoRA权重")
             save_state_dict = lora.lora_state_dict(save_model, bias='all') # 只保存lora生效的那些层
+            model_state = save_model.state_dict()
+            save_state_dict.update({k: model_state[k] for k in model_state if 'running_mean' in k or 'running_var' in k})
             # lora启用时，单独保存speed router的权重
             logger.info(f"LoRA已经开启，同时也保存speed router的权重")
             for k, v in save_model.state_dict().items():
