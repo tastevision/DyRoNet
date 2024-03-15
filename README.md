@@ -2,11 +2,12 @@
 
 This repository provides the source code for the paper titled *DyRoNet: A Low-Rank Adapter Enhanced Dynamic Routing Network for Streaming Perception* along with explanations of the relevant training and testing methods.
 
-DyRoNet (Dynamic Routing Network) is a novel real-time streaming perception method. Its dynamic property enables the model to adapt to various environmental conditions, and by selecting appropriate sub-models from the model bank, it achieves optimal performance globally.
+The quest for *real-time, accurate environmental perception* is pivotal in the evolution of autonomous driving technologies. In response to this challenge, we present *DyRoNet*, a *Dynamic Router Network* that innovates by incorporating *low-rank dynamic routing* to enhance streaming perception. *DyRoNet* distinguishes itself by seamlessly integrating a diverse array of specialized pre-trained branch networks, each meticulously fine-tuned for specific environmental contingencies, thus facilitating an optimal balance between response latency and detection precision. Central to *DyRoNet*'s architecture is the *Speed Router* module, which employs an intelligent routing mechanism to dynamically allocate input data to the most suitable branch network, thereby ensuring enhanced performance adaptability in real-time scenarios. Through comprehensive evaluations, *DyRoNet* demonstrates superior adaptability and improved performance over existing methods, efficiently catering to a wide variety of environmental conditions and setting new benchmarks in streaming perception accuracy and efficiency. Beyond establishing a paradigm in autonomous driving perception, *DyRoNet* also offers engineering insights and lays a foundational framework for future advancements in streaming perception. For further information and updates on the project, please visit our [homepage][https://tastevision.github.io/DyRoNet/].
 
-<p align='center'>
+	<p align='center'>
   <img src='assets/framework.jpg' width='900'/>
 </p>
+
 
 ## Installation
 
