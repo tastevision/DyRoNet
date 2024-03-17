@@ -50,6 +50,8 @@ bash run_train_full.sh # for full fine-tuning
 
 ### Evaluation
 
+You can obtain the weight files using the training method mentioned above. Meanwhile, we also provide the optimal weights which you can download from [here](https://drive.google.com/drive/folders/1FzXSi1rG9ersm4JMQSvspbaz6Fzs_xpy?usp=sharing) and place them under the `./models/` directory.
+
 ```shell
 bash run_eval_lora.sh # for lora fine-tuning
 bash run_eval_full.sh # for full fine-tuning
