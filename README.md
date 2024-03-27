@@ -56,3 +56,18 @@ You can obtain the weight files using the training method mentioned above. Meanw
 bash run_eval_lora.sh # for lora fine-tuning
 bash run_eval_full.sh # for full fine-tuning
 ```
+
+## Citation
+
+If you think this work is helpful, please cite: 
+
+```bibtex
+@misc{huang2024dyronet,
+      title={DyRoNet: Dynamic Routing and Low-Rank Adapters for Autonomous Driving Streaming Perception}, 
+      author={Xiang Huang and Zhi-Qi Cheng and Jun-Yan He and Chenyang Li and Wangmeng Xiang and Baigui Sun and Xiao Wu},
+      year={2024},
+      eprint={2403.05050},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
