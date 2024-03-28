@@ -201,7 +201,7 @@ def make_parser():
     parser.add_argument(
         "--lora-rank",
         type=int,
-        default=16,
+        default=32,
         help="lora保存时的秩",
     )
     return parser
