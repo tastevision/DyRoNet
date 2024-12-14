@@ -1,8 +1,10 @@
-# DyRoNet: A Low-Rank Adapter Enhanced Dynamic Routing Network for Streaming Perception
+# DyRoNet: Dynamic Routing and Low-Rank Adapters for Autonomous Driving Streaming Perception
 
-This repository provides the source code for the paper titled *DyRoNet: A Low-Rank Adapter Enhanced Dynamic Routing Network for Streaming Perception* along with explanations of the relevant training and testing methods.
+This repository provides the source code for the paper titled *DyRoNet: Dynamic Routing and Low-Rank Adapters for Autonomous Driving Streaming Perception* along with explanations of the relevant training and testing methods.
 
 The advancement of autonomous driving systems hinges on the ability to achieve low-latency and high-accuracy perception. To address this critical need, this paper introduces *Dynamic Routering Network (DyRoNet)*, a low-rank enhanced dynamic routing framework designed for streaming perception in autonomous driving systems. DyRoNet integrates a suite of pre-trained branch networks, each meticulously fine-tuned to function under distinct environmental conditions. At its core, the framework offers a speed router module, developed to assess and route input data to the most suitable branch for processing. This approach not only addresses the inherent limitations of conventional models in adapting to diverse driving conditions but also ensures the balance between performance and efficiency. Extensive experimental evaluations demonstrating the adaptability of DyRoNet to diverse branch selection strategies, resulting in significant performance enhancements across different scenarios. This work not only establishes a new benchmark for streaming perception but also provides valuable engineering insights for future work. For further information and updates on the project, please visit https://tastevision.github.io/DyRoNet/.
+
+This paper already accepted by WACV 2025.
 
 <p align='center'>
   <img src='assets/framework.jpg' width='900'/>
