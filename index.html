@@ -1950,7 +1950,67 @@
             <h1 id='dyronet-a-low-rank-adapter-enhanced-dynamic-routing-network-for-streaming-perception'>
                 <p align="center"><font size="16">DyRoNet:</font></p><p align="center">Dynamic Routing and Low-Rank Adapters for Autonomous Driving Streaming Perception</p></h1>
             <div class="is-size-5 publication-authors">
-		    The code will coming soon, please wait.
+            <p align="center"><span class="author" data-institution="1,*">Xiang Huang</span>, <span class="author" data-institution="2">Zhi-Qi Cheng</span><sup>&Dagger;</sup>, <span class="author" data-institution="3">Jun-Yan He</span>, <span class="author" data-institution="3">Chenyang Li</span>, <span class="author" data-institution="3">Wangmeng Xiang</span>, <span class="author" data-institution="3">Baigui Sun</span></p>
+            </div>
+            <div class="is-size-5 publication-authors">
+            <p align="center"><sup>1</sup>Institute of Artificial Intelligence, Southwest Jiaotong University, Chengdu, China.
+<sup>2</sup>School of Engineering and Technology, University of Washington, Tacoma, WA, USA.
+<sup>3</sup>Institute for Intelligent Computing, Alibaba Group, China.
+<p align="center"><sup>*</sup>This work was completed during visit to CMU and Alibaba. <sup>&Dagger;</sup>Corresponding Author, also a Visiting Assistant Professor at CMU.
+              </p>
+            </div>
+            <div class="column has-text-centered" align="center">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2403.05050.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>&nbsp;
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.05050" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>&nbsp;
+                <span class="link-block">
+                  <a href="https://github.com/tastevision/DyRoNet"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+            <p>
+The advancement of autonomous driving systems hinges on the ability to achieve low-latency and high-accuracy perception. To address this critical need, this paper introduces <strong>Dy</strong>namic <strong>Ro</strong>utering <strong>Net</strong>work (DyRoNet), a low-rank enhanced dynamic routing framework designed for streaming perception in autonomous driving systems. DyRoNet integrates a suite of pre-trained branch networks, each meticulously fine-tuned to function under distinct environmental conditions. At its core, the framework offers a speed router module, developed to assess and route input data to the most suitable branch for processing. This approach not only addresses the inherent limitations of conventional models in adapting to diverse driving conditions but also ensures the balance between performance and efficiency. Extensive experimental evaluations demonstrating the adaptability of DyRoNet to diverse branch selection strategies, resulting in significant performance enhancements across different scenarios. This work not only establishes a new benchmark for streaming perception but also provides valuable engineering insights for future work.
+            <p align='center'>
+                <img src='imgs/framework.jpg' width='900'/>
+            </p>
+                <p><span>The videos presented here demonstrate the advantages of our proposed <i>DyRoNet</i>. From the videos, it is evident that <i>DyRoNet</i> can achieve performance equal to or even surpassing all sub-models in the Model Bank (in these examples, <i>DyRoNet</i> is consisting of <i>StreamYOLO s</i> and <i>StreamYOLO m</i>) in complex and dynamic autonomous driving scenarios.</span></p>
+            <video controls>
+              <source src="./videos/5ab2697b-6e3e-3454-a36a-aba2c6f27818.mp4" type="video/mp4">
+            </video>
+            <video controls>
+              <source src="./videos/033669d3-3d6b-3d3d-bd93-7985d86653ea.mp4" type="video/mp4">
+            </video>
+            <video controls>
+              <source src="./videos/f9fa3960-537f-3151-a1a3-37a9c0d6d7f7.mp4" type="video/mp4">
+            </video>
+            <p><span>In static scenarios, <i>DyRoNet</i>'s performance is equivalent to that of any individual sub-model in the Model Bank.</span></p>
+            <video controls>
+              <source src="./videos/33737504-3373-3373-3373-633738571776.mp4" type="video/mp4">
+            </video>
+            <p><span>The following table illustrates the specific performance of DyRoNet under different Model Bank configurations:</span></p>
+            <div id='write'  class=''><figure class='table-figure'><table><thead><tr><th><span>Model Bank</span></th><th><span>sAP (0.50:0.95)</span></th><th><span>sAP (0.50)</span></th><th><span>sAP (0.75)</span></th><th><span>sAP s</span></th><th><span>sAP m</span></th><th><span>sAP l</span></th></tr></thead><tbody><tr><td><span>StreamYOLO S + M</span></td><td><span>33.7</span></td><td><span>53.9</span></td><td><span>34.1</span></td><td><span>13.0</span></td><td><span>35.1</span></td><td><span>59.3</span></td></tr><tr><td><span>StreamYOLO S + L</span></td><td><span>36.9</span></td><td><span>58.2</span></td><td><span>37.5</span></td><td><span>14.8</span></td><td><span>37.4</span></td><td><span>64.2</span></td></tr><tr><td><span>StreamYOLO M + L</span></td><td><span>35.0</span></td><td><span>55.7</span></td><td><span>35.5</span></td><td><span>13.7</span></td><td><span>36.2</span></td><td><span>61.1</span></td></tr><tr><td><span>LongShortNet S + M</span></td><td><span>30.5</span></td><td><span>51.2</span></td><td><span>30.2</span></td><td><span>11.3</span></td><td><span>31.1</span></td><td><span>56.1</span></td></tr><tr><td><span>LongShortNet S + L</span></td><td><span>37.1</span></td><td><span>58.3</span></td><td><span>37.6</span></td><td><span>15.1</span></td><td><span>37.6</span></td><td><span>63.7</span></td></tr><tr><td><span>LongShortNet M + L</span></td><td><span>36.9</span></td><td><span>58.2</span></td><td><span>37.4</span></td><td><span>14.9</span></td><td><span>37.5</span></td><td><span>63.3</span></td></tr><tr><td><span>DAMO-StreamNet S + M</span></td><td><span>35.5</span></td><td><span>56.9</span></td><td><span>36.2</span></td><td><span>14.4</span></td><td><span>36.8</span></td><td><span>63.2</span></td></tr><tr><td><span>DAMO-StreamNet S + L</span></td><td><span>37.8</span></td><td><span>59.1</span></td><td><span>38.7</span></td><td><span>16.1</span></td><td><span>39.0</span></td><td><span>64.2</span></td></tr><tr><td><span>DAMO-StreamNet M + L</span></td><td><span>37.8</span></td><td><span>58.8</span></td><td><span>38.8</span></td><td><span>16.1</span></td><td><span>39.0</span></td><td><span>64.0</span></td></tr></tbody></table></figure>
+<h2 id='citation'><span>Citation</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded md-focus" spellcheck="false" lang="bibtex"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="bibtex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 216.945px; left: 16.4062px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">@misc{huang2024dyronet,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  title={DyRoNet: Dynamic Routing and Low-Rank Adapters for Autonomous Driving Streaming Perception}, </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  author={Xiang Huang and Zhi-Qi Cheng and Jun-Yan He and Chenyang Li and Wangmeng Xiang and Baigui Sun and Xiao Wu},</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  year={2024},</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  eprint={2403.05050},</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  archivePrefix={arXiv},</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  primaryClass={cs.CV}</span></pre><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div><div class="CodeMirror-gutters" style="display: none; height: 230px;"></div></div></div></pre><p>&nbsp;</p></div></div>
     </div>
     </div>
 </body>
